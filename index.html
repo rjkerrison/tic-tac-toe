@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li>
+          <button id="mute">
+            Mute
+          </button>
+        </li>
+        <li>
+          <button id="customise">
+            Customise
+          </button>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <h1 class="large">Tic tac toe</h1>
+
+      <ul id="board" class="hidden"></ul>
+
+      <p id="display"></p>
+
+      <button id="play">
+        Let's play!
+      </button>
+    </main>
+    <aside class="hidden">
+      <h2>Customise</h2>
+      <form id="custom">
+        <fieldset id="teams">
+          <legend>Teams</legend>
+          <div class="team-list"></div>
+          <button id="add-team">Add team</button>
+        </fieldset>
+        <fieldset id="board-settings">
+          <legend>Board</legend>
+          <ul class="settings">
+            <li>
+              <label for="size">
+                Size
+              </label>
+              <input type="number" name="size" value="5" min="3" max="42" />
+            </li>
+            <li>
+              <label for="win">
+                Win length
+              </label>
+              <input type="number" name="win" value="3" min="2" max="13" />
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </aside>
+    
+    <audio
+      id="end-game-sound"
+      src="./video-game-beeps.mp3" />
+
+    <audio
+      id="score-1-sound"
+      src="./score-1.mp3" />
+
+    <audio
+      id="score-2-sound"
+      src="./score-2.mp3" />
+
+    <audio
+      id="loop-sound"
+      loop="true"
+      src="./video-game-loop.mp3" />
+
+    <script src="script.js"></script>
+  </body>
+</html>
