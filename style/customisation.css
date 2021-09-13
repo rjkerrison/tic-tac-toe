@@ -1,0 +1,48 @@
+
+.team-list,
+.settings {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Squada One', cursive;
+}
+
+.team-list div,
+.settings li {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  align-items: stretch;
+  margin-bottom: 0.5rem;
+}
+
+.settings li > label,
+.settings li > input {
+ flex-basis: 50%;
+}
+.settings li > input {
+ min-width: 0;
+ text-align: center;
+}
+
+form input,
+form button,
+form label {
+  font-size: calc(1rem + 3vmin);
+  font-family: 'Squada One', cursive;
+}
+
+form input {
+  background: none;
+  border: none;
+  border-bottom: 0.25rem solid rgb(189, 9, 138);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete {
+  display: inline;
+}

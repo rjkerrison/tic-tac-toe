@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Monoton', cursive;
+  overflow: hidden;
+}
+
+body {
+  background: rgb(242, 228, 0);
+  padding: 0;
+  margin: 0;
+}
+
+main, aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: max(5vw, 3rem);
+  transition: font-size ease-in-out 1s;
+}
+
+h1.large {
+  font-size: 15vw;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-family: 'Squada One', cursive;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(148, 9, 189, 0.5);
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+p#display {
+  height: 2rem;
+  font-size: 2rem;
+}
+
+/* parallax 80s effect */
+
+body:after{
+  content: '';
+  display: block;
+  background-image: linear-gradient(90deg,
+      rgba(252,25,154,.3) 1px,
+      rgba(0,0,0,0) 2px),
+    linear-gradient(0deg,
+      rgba(252,25,154,.3) 1px,
+      rgba(0,0,0,0) 2px);
+  background-repeat: repeat;
+  background-size: 20px 20px;
+  position: absolute;
+  pointer-events: none;
+  bottom: 0;
+  overflow: hidden;
+  /* sizing properties here are very brittle */
+  height: 1000vh;
+  width: 600vw;
+  background-position: top;
+  transform: perspective(100vh) rotateX(60deg);
+  left: -250vw; /* half width -100vw to centre the background */
+  z-index: -1;
+  transform-origin: bottom center;
+}
+
+header {
+  background: rgb(148, 9, 189);
+  margin: 0;
+  padding: 0.25rem;
+  width: 100vw;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+header button {
+  background: yellow;
+  font-size: 1rem;
+}

@@ -1,0 +1,27 @@
+
+ul#board {
+  --size: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--size), 1fr);
+  grid-template-rows: repeat(var(--size), 1fr);
+  width: 50vmin;
+  height: 50vmin;
+  font-size: calc(0.5rem + 30vmin / var(--size));
+}
+
+li.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: rgb(242, 228, 0);
+  text-shadow: 2px 2px 2px rgb(242, 228, 0, 0.5);
+}
+
+li.cell:nth-of-type(odd) {
+  background: rgb(148, 9, 189);
+}
+
+li.cell:nth-of-type(even) {
+  background: rgb(189, 9, 138);
+}

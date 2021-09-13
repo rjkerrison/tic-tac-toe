@@ -1,0 +1,74 @@
+.hidden {
+  /* I try never to use !important */
+  display: none !important;
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+.fade-out {
+  animation: fade-in 1s ease-in-out reverse;
+}
+
+.spin {
+  animation: spin 1s ease-in-out reverse;
+}
+
+.tilt {
+  animation: tilt 1s ease-in-out;
+  transform: perspective(60vh) rotateX(60deg);
+}
+
+.flash {
+  animation: flash 0.5s ease-in-out 5;
+}
+
+.font-grow {
+  animation: font-grow 1s ease infinite alternate;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tilt {
+  from {
+    transform: none;
+  }
+  to {
+    transform: perspective(60vh) rotateX(60deg);
+  }
+}
+
+@keyframes flash {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+@keyframes font-grow {
+  from {
+    font-size: 0.75em;
+  }
+  to {
+    font-size: 1.5em;
+  }
+}
