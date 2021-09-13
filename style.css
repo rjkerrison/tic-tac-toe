@@ -90,8 +90,8 @@ button {
   animation: spin 1s ease-in-out reverse;
 }
 
-.bend {
-  animation: bend 1s ease-in-out;
+.tilt {
+  animation: tilt 1s ease-in-out;
   transform: perspective(60vh) rotateX(60deg);
 }
 
@@ -126,7 +126,7 @@ p#display {
   }
 }
 
-@keyframes bend {
+@keyframes tilt {
   from {
     transform: none;
   }
