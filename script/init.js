@@ -8,7 +8,7 @@
   const { board, resetBoard } = setupBoard()
 
   const game = setupGame({
-    teams: ['Robin', 'Mike', 'Emile'],
+    teams: ['Robin', 'Joan', 'Emile'],
     size: 5,
     resetBoard,
     board
