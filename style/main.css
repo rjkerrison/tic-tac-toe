@@ -29,7 +29,7 @@ h1 {
 }
 
 h1.large {
-  font-size: 15vw;
+  font-size: max(15vw, 9rem);
 }
 
 ul {
